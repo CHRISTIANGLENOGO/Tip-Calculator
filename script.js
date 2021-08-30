@@ -89,8 +89,8 @@ class TipCalculator {
     }
 
     show(tip, total) {
-        this.displayTip.innerText = tip.toFixed(2);
-        this.displayTotal.innerText = total.toFixed(2);
+        this.displayTip.innerText = `$${tip.toFixed(2)}`;
+        this.displayTotal.innerText = `$${total.toFixed(2)}`;
     }
 
     clear() {
