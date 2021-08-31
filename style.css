@@ -25,6 +25,9 @@ body {
 
 #logo {
   text-align: center;
+}
+
+#logo img {
   margin: 100px 0px 50px;
 }
 
@@ -68,6 +71,7 @@ body {
   border-radius: 5px;
   cursor: pointer;
   margin: 10px 0px 20px;
+  height: 45px; 
 }
 
 .upper-left .bill-input img {
@@ -95,6 +99,10 @@ body {
 .upper-left .bill-input input::-webkit-outer-spin-button,
 .upper-left .bill-input input::-webkit-inner-spin-button {
   -webkit-appearance: none;
+}
+
+.upper-left .bill-input input[type="number"] {
+  -moz-appearance: textfield;
 }
 
 .middle-left {
@@ -152,6 +160,10 @@ body {
   -webkit-appearance: none;
 }
 
+.middle-left .tip-btn input[type="number"] {
+  -moz-appearance: textfield;
+}
+
 .lower-left .people-text {
   display: flex;
   justify-content: space-between;
@@ -181,6 +193,7 @@ body {
   border-radius: 5px;
   cursor: pointer;
   margin-top: 10px;
+  height: 45px;
 }
 
 .lower-left .people img {
