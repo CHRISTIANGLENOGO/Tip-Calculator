@@ -85,12 +85,22 @@ class TipCalculator {
             default:
                 return
         }
-        this.show(tip, total);
+        this.show(tip.toFixed(2), total.toFixed(2));
     }
 
     show(tip, total) {
-        this.displayTip.innerText = `$${tip.toFixed(2)}`;
-        this.displayTotal.innerText = `$${total.toFixed(2)}`;
+        const splitTip = tip.split('.')[1];
+        const splitTotal = total.split('.')[1];
+        if(splitTip == "00") {
+            this.displayTip.innerText = `$${Math.floor(tip)}`;
+        }else {
+            this.displayTip.innerText = `$${tip}`;
+        }
+        if(splitTotal == "00") {
+            this.displayTotal.innerText = `$${Math.floor(total)}`;
+        }else {
+            this.displayTotal.innerText = `$${total}`;
+        }
     }
 
     clear() {
